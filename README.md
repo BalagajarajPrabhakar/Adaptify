@@ -99,7 +99,3 @@ To simulate sensor inputs, populate a MySQL database with the following tables:
 
 ---
 
-## 📄 License
-
-This project is licensed for educational and non-commercial use under the MIT License.
-

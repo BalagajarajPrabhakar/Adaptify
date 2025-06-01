@@ -1,99 +1,105 @@
-# Adaptify
+# 🌍 Adaptify
 
-# Leveraging IoT and RAG with Watsonx.ai to Smartly Track, Optimize, and Reduce Carbon Footprint for Businesses and Individuals
+**Leveraging IoT and RAG with Watsonx.ai to Smartly Track, Optimize, and Reduce Carbon Footprint for Businesses and Individuals**
 
 A real-time environmental monitoring dashboard and AI assistant designed to analyze CO₂ emissions, provide actionable insights, and calculate carbon credits — powered by IBM watsonx.ai and Retrieval-Augmented Generation (RAG).
 
 ---
 
-## Overview
+## 🚀 Live Demo
 
-This project was developed for the Hackathon for Progress, focusing on sustainability and smart environmental monitoring. It enables stakeholders to:
-- Monitor real-time CO₂ levels from smart sensors.
+🔗 **Try it here**: [https://40bb433ffea8be2d45.gradio.live/](https://40bb433ffea8be2d45.gradio.live/)  
+⚠️ *Note: This share link expires in 1 week.*
+
+🎥 **Watch Demo Video**: [YouTube Link](https://youtu.be/ybUqVFnjNag)
+
+---
+
+## 🧭 Overview
+
+Developed for the **Hackathon for Progress**, this project focuses on sustainability through smart environmental monitoring. It enables stakeholders to:
+
+- Monitor real-time CO₂ levels from IoT sensors.
 - Analyze monthly and yearly emission trends.
 - Ask AI-powered questions about emissions, carbon credits, and reduction strategies.
-- Earn insights from web sources via a RAG-based assistant.
-- Visualize environmental progress in an intuitive dashboard.
+- Gain actionable insights using Retrieval-Augmented Generation (RAG).
+- Visualize environmental progress through an intuitive dashboard.
 
 ---
 
-## Powered By
+## 🧠 Powered By
 
-- IBM watsonx.ai – AI model (Granite 3-8B Instruct) for intelligent Q&A.
-- Tavily – Web search API for real-time RAG context enrichment.
-- Gradio – Interactive user interface.
-- Plotly – CO₂ visualization and trend charts.
-- MySQL – Backend database for sensor and summary data.
+- **IBM watsonx.ai** – Granite 3-8B Instruct model for intelligent Q&A.
+- **Tavily API** – Real-time web search for RAG context enrichment.
+- **Gradio** – Interactive web interface.
+- **Plotly** – Dynamic CO₂ charts and trend visualizations.
+- **MySQL** – Backend data storage for sensor readings and summaries.
 
 ---
 
-## Features
+## ⚙️ Features
 
-### Real-Time Monitoring
-- Live fetch from MySQL database.
+### 📡 Real-Time Monitoring
+- Live data from `realtime_emission_data` table.
 - Displays the last 10 CO₂ records.
-- Line graph showing emission trends.
+- Line chart showing emissions over time.
 
-### Carbon Credit Calculation
-- Compares yearly totals to quantify reduction.
-- Calculates earned carbon credits based on emission drop.
+### ♻️ Carbon Credit Calculation
+- Compares yearly emissions to determine reduction.
+- Calculates credits using:  
+  `Carbon Reduced = Emission_Year_N - Emission_Year_N-1`  
+  `Credits Earned = Carbon Reduced / 1000`
 
-### AI RAG Assistant
-- Combines structured data + web results.
-- Uses IBM Watsonx Granite model for domain-specific question answering.
-- Out-of-scope detection for unrelated topics.
+### 🤖 AI RAG Assistant
+- Combines structured sensor data with real-time web context.
+- Uses IBM Watsonx for question answering.
+- Smart detection of off-topic or unsupported queries.
 
-### Web Search Integration
-- Uses Tavily API to fetch relevant web insights for each user query.
-- Enriches the AI's responses with up-to-date information.
-
----
-
-## Interface Preview
-
-Built using Gradio with two interactive tabs:
-1. Live Dashboard — CO₂ data and carbon credit visualization.
-2. RAG Assistant — Ask questions and get AI-generated, data-aware responses.
+### 🔍 Web Search Integration
+- Tavily API enriches AI responses with the latest external information.
+- Helps provide credible, real-time insights.
 
 ---
 
-## Sample Data
+## 🧪 Interface Preview
 
-To simulate sensor inputs, populate your MySQL DB with tables:
+Built using **Gradio**, the UI has two tabs:
+
+1. **Live Dashboard** – Visualizes CO₂ data and earned carbon credits.
+2. **RAG Assistant** – Ask AI anything about your emissions and get data-aware answers.
+
+---
+
+## 🧾 Sample Data Structure
+
+To simulate sensor inputs, populate a MySQL database with the following tables:
+
 - `realtime_emission_data`
 - `monthly_emission_summary`
 - `yearly_emission_summary`
 
-You may include a simple script to insert mock data for testing.
+> 💡 You may include a script to auto-populate mock data for demo purposes.
 
 ---
 
-## Carbon Credit Logic
+## 💡 Example Use Cases
 
-- Carbon Reduced = Total_Emission_Year_N - Total_Emission_Year_N-1  
-- Credit Earned = Carbon Reduced / 1000 (1 credit = 1000 units reduction)
-
----
-
-## Example Use Cases
-
-- “Are this year’s emissions lower than last?”
-- “How many carbon credits have we earned this year?”
-- “Suggest ways to reduce CO₂ emissions in smart buildings.”
-- “What are the latest carbon offset technologies?”
+- "Are this year’s emissions lower than last?"
+- "How many carbon credits have we earned this year?"
+- "Suggest ways to reduce CO₂ emissions in smart buildings."
+- "What are the latest carbon offset technologies?"
 
 ---
 
-## Acknowledgments
+## 🙌 Acknowledgments
 
-- IBM watsonx.ai – for enabling intelligent, sustainable solutions.
-- Tavily API – for enhancing RAG responses with real-time search.
-- Gradio and Plotly – for seamless visualization and interaction.
+- **IBM watsonx.ai** – for enabling intelligent, sustainable AI solutions.
+- **Tavily API** – for enriching AI responses with up-to-date information.
+- **Gradio** & **Plotly** – for seamless visualization and user interaction.
 
 ---
 
-## Link
+## 📄 License
 
-[https://youtu.be/ybUqVFnjNag](https://youtu.be/ybUqVFnjNag)
-
+This project is licensed for educational and non-commercial use under the MIT License.
 
